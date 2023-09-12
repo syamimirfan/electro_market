@@ -1,3 +1,4 @@
+import 'package:electro_market/authentication/forgot_password.dart';
 import 'package:electro_market/authentication/login.dart';
 import 'package:electro_market/authentication/register.dart';
 import 'package:electro_market/provider/hidden_password.dart';
@@ -21,10 +22,11 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Login(),
+        home: const Login(),
         routes: {
-          '/login':(context) => Login(),
-          '/register':(context) => Register()
+          '/login':(context) => const Login(),
+          '/register':(context) => const Register(),
+          '/forgot_password':(context) => const ForgotPassword(),
         },
       ),
     );

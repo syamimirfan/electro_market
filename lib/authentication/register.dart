@@ -63,7 +63,52 @@ class _RegisterState extends State<Register> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [                         
-                           SizedBox(height: deviceHeight(context) * 0.09,),
+                           SizedBox(height: deviceHeight(context) * 0.03,),
+                           TextField(
+                             decoration:  inputDecorationAuthorization.copyWith(
+                               suffixIcon: const Icon(Icons.person, color: Constants.secondaryColor,),
+                               label: const Text(
+                                "First Name",
+                                style: TextStyle(
+                                  fontFamily: "Roboto",
+                                  fontWeight: FontWeight.bold,
+                                  color: Constants.secondaryColor
+                                ) ,
+                               )
+                             ),
+                           ),
+
+                          SizedBox(height: deviceHeight(context) * 0.01,),
+                           TextField(
+                             decoration:  inputDecorationAuthorization.copyWith(
+                               suffixIcon: const Icon(Icons.person_2, color: Constants.secondaryColor,),
+                               label: const Text(
+                                "Last Name",
+                                style: TextStyle(
+                                  fontFamily: "Roboto",
+                                  fontWeight: FontWeight.bold,
+                                  color: Constants.secondaryColor
+                                ) ,
+                               )
+                             ),
+                           ), 
+                       
+                          SizedBox(height: deviceHeight(context) * 0.01,),
+                           TextField(
+                             decoration:  inputDecorationAuthorization.copyWith(
+                               suffixIcon: const Icon(Icons.phone, color: Constants.secondaryColor,),
+                               label: const Text(
+                                "Phone Number",
+                                style: TextStyle(
+                                  fontFamily: "Roboto",
+                                  fontWeight: FontWeight.bold,
+                                  color: Constants.secondaryColor
+                                ) ,
+                               )
+                             ),
+                           ), 
+
+                          SizedBox(height: deviceHeight(context) * 0.01,),
                            TextField(
                             decoration: inputDecorationAuthorization.copyWith(
                               suffixIcon: const Icon(Icons.email, color: Constants.secondaryColor,),
@@ -102,20 +147,7 @@ class _RegisterState extends State<Register> {
                                 ),
                               )
                             ),
-                          ),
-                     SizedBox(height: deviceHeight(context) * 0.01,),
-                              
-                          const Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              "Forgot Password", 
-                              style: TextStyle(
-                                fontFamily: "Roboto",
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17
-                              ),
-                            ),
-                          ),
+                          ),                      
                               
                            SizedBox(height: deviceHeight(context) * 0.1,),
                               
@@ -128,7 +160,7 @@ class _RegisterState extends State<Register> {
                             ),
                             child: const Center(
                               child: Text(
-                                "Sign In",
+                                "Sign Up",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
@@ -137,35 +169,6 @@ class _RegisterState extends State<Register> {
                               ),
                             ),
                           ),
-                              
-                     SizedBox(height: deviceHeight(context) * 0.15,),
-                              
-                          const Align(
-                            alignment: Alignment.bottomRight,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Text(
-                                  "Don't have account?", 
-                                  style: TextStyle(
-                                    fontFamily: "Roboto",
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.grey
-                                  ),
-                                ),
-                                Text(
-                                  "Sign Up", 
-                                  style: TextStyle(
-                                    fontFamily: "Roboto",
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 17,
-                                    color: Constants.quaternaryColor
-                                  ),
-                                ),
-                              ],
-                            )
-                          )
                         ],
                       ),
                     ),

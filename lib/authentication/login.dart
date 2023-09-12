@@ -107,14 +107,19 @@ class _LoginState extends State<Login> {
                           ),
                      SizedBox(height: deviceHeight(context) * 0.01,),
                               
-                          const Align(
+                           Align(
                             alignment: Alignment.centerRight,
-                            child: Text(
-                              "Forgot Password", 
-                              style: TextStyle(
-                                fontFamily: "Roboto",
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(context, "/forgot_password");
+                              },
+                              child: const Text(
+                                "Forgot Password", 
+                                style: TextStyle(
+                                  fontFamily: "Roboto",
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17
+                                ),
                               ),
                             ),
                           ),
@@ -158,7 +163,7 @@ class _LoginState extends State<Login> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    Navigator.pushReplacementNamed(context, '/register');
+                                    Navigator.pushNamed(context, '/register');
                                   },
                                   child: const Text(
                                     "Sign Up", 

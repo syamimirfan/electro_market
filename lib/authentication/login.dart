@@ -126,20 +126,25 @@ class _LoginState extends State<Login> {
                               
                            SizedBox(height: deviceHeight(context) * 0.1,),
                               
-                          Container(
-                            height: 55,
-                            width: 300,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: Constants.tertiaryColor
-                            ),
-                            child: const Center(
-                              child: Text(
-                                "Sign In",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: Constants.primaryColor
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, "/home");
+                            },
+                            child: Container(
+                              height: 55,
+                              width: 300,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                color: Constants.tertiaryColor
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  "Sign In",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    color: Constants.primaryColor
+                                  ),
                                 ),
                               ),
                             ),

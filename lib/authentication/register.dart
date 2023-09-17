@@ -151,20 +151,25 @@ class _RegisterState extends State<Register> {
                               
                            SizedBox(height: deviceHeight(context) * 0.1,),
                               
-                          Container(
-                            height: 55,
-                            width: 300,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: Constants.tertiaryColor
-                            ),
-                            child: const Center(
-                              child: Text(
-                                "Sign Up",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: Constants.primaryColor
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/verification');
+                            },
+                            child: Container(
+                              height: 55,
+                              width: 300,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                color: Constants.tertiaryColor
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  "Sign Up",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    color: Constants.primaryColor
+                                  ),
                                 ),
                               ),
                             ),
